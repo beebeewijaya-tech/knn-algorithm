@@ -1,0 +1,39 @@
+# 0. Define the training data
+training_data = [
+    # [X. y]
+    [8, 0],
+    [5, 0],
+    [7, 0],
+    [9, 0],
+    [29, 1],
+    [28, 1],
+    [24, 1],
+    [35, 1],
+    [34, 1],
+    [26, 1],
+    [27, 1],
+    [14, 0],
+    [18, 0],
+    [19, 0],
+    [20, 0],
+    [26, 1],
+    [24, 1],
+]
+
+# 1. Define the K
+K = 5
+
+# 2. Calculate the distance between input and training data
+distance_of_x = []
+for i in training_data:
+    calculate_distance = √ ∑ (X-X[i][0])^2
+    distance_of_x.append(calculate_distance)
+
+# 3. Sort distance in ascending order
+sorted_distance_x = sort(distance_of_x, ascending)
+
+# 4. Select K nearest data points in ascending order, we want to get the nearest
+neighbors = sorted_distance_x[0, k]
+
+# 5. Return the majority vote
+result = mode(neighbors) # 0 or 1

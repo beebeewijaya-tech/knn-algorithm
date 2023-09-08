@@ -1,0 +1,11 @@
+# 1. import the model
+import model from training model
+
+# 2. Define input
+X = 24
+
+# 3. Predict
+model.predict(X)
+
+# 4. Output
+0 or 1
