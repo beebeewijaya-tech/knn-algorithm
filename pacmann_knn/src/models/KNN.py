@@ -17,12 +17,16 @@ class KNN:
 
     def predict(self, X_input):
         # Predicting the value of X_input
-        neighbors = self.calculate(X_input)
-        majority = []
-        for n_i in neighbors:
-            majority.append(n_i[1])
+        res = []
+        for x_i in X_input:
+            neighbors = self.calculate(x_i)
+            majority = []
+            for n_i in neighbors:
+                majority.append(n_i[1])
 
-        return statistics.mode(majority)
+            res.append(statistics.mode(majority))
+
+        return res
 
     def calculate(self, X_input):
         # Calculating distance of euclidean using np

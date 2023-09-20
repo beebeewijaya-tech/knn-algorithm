@@ -10,7 +10,9 @@ def plotting_predict_buy_no(x, y):
     """
 
     plt.title("Buy VS No K-Value")
-    plt.ylabel("Predicted Value")
-    plt.ylabel("K Value")
+    plt.ylabel("Accuracy")
+    plt.xlabel("K Value")
     plt.plot(x, y)
+    plt.savefig('foo.png', bbox_inches='tight')
     plt.show()
+
